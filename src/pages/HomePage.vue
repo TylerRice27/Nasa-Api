@@ -1,4 +1,11 @@
-<template></template>
+<template>
+  <div class="container-fluid">
+    <div
+      class="background-img grow row"
+      :style="`background-image: url(${picture?.largeImgUrl})`"
+    ></div>
+  </div>
+</template>
 
 <script>
 import { computed, onMounted } from "@vue/runtime-core";
@@ -40,5 +47,8 @@ export default {
       object-position: center;
     }
   }
+}
+.grow {
+  height: 100vh;
 }
 </style>
