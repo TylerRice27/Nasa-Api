@@ -1,9 +1,21 @@
 <template>
   <div class="container-fluid">
     <div
-      class="background-img grow row"
+      class="background-img grow row justify-content-end"
       :style="`background-image: url(${picture?.largeImgUrl})`"
-    ></div>
+    >
+      <div class="col-md-12 text-light cal m-2 p-3 bg-dark elevation-2 d-flex">
+        <label for="start shadow ">Pick Your Date</label>
+
+        <input
+          type="date"
+          id="start"
+          name="trip-start"
+          value="6-14-2022"
+          max="6-14-2022"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -25,6 +37,7 @@ export default {
     });
     return {
       picture: computed(() => AppState.apods),
+      date: new Date(),
     };
   },
 };
