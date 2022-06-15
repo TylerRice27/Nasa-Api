@@ -16,6 +16,13 @@ class ApodsService {
         AppState.apods = res.data
     }
 
+    // come back to this later
+    // I believe this will allow me to write a function
+    // to be able get different apods based on the date
+    async changeApod() {
+
+
+    }
 
 }
 
